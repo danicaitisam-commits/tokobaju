@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store - Toko Baju Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-tshirt"></i>
+                    <h1>Fashion Store</h1>
+                </div>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="active">Beranda</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="#categories">Kategori</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-icons">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Trend Fashion Terbaru</h2>
+                <p>Koleksi baju terbaru dengan harga terjangkau</p>
+                <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Kategori Produk</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-male"></i>
+                    <h3>Pria</h3>
+                    <p>150 produk</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-female"></i>
+                    <h3>Wanita</h3>
+                    <p>200 produk</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-child"></i>
+                    <h3>Anak</h3>
+                    <p>80 produk</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Aksesoris</h3>
+                    <p>50 produk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produk Terbaru</h2>
+                <div class="filter-sort">
+                    <select id="categoryFilter">
+                        <option value="all">Semua Kategori</option>
+                        <option value="pria">Pria</option>
+                        <option value="wanita">Wanita</option>
+                        <option value="anak">Anak</option>
+                    </select>
+                    <select id="sortFilter">
+                        <option value="terbaru">Terbaru</option>
+                        <option value="termurah">Termurah</option>
+                        <option value="termahal">Termahal</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+
+            <div class="load-more">
+                <button class="btn btn-secondary" id="loadMoreBtn">Lihat Lebih Banyak</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h3>Keranjang Belanja</h3>
+                <button class="close-cart" id="closeCartBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-price" id="totalPrice">Rp 0</span>
+                </div>
+                <button class="btn btn-primary btn-checkout" id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang Fashion Store</h2>
+                    <p>Kami adalah toko baju online yang menyediakan berbagai macam pakaian berkualitas dengan harga terjangkau. Berdiri sejak 2020, kami telah melayani ribuan pelanggan di seluruh Indonesia.</p>
+                    <p>Misi kami adalah memberikan fashion terbaik untuk setiap kalangan dengan kualitas premium namun tetap terjangkau.</p>
+                    <a href="#contact" class="btn btn-secondary">Hubungi Kami</a>
+                </div>
+                <div class="img/fotosaya.jpg">
+                    <img src="img/fotosaya.jpg" alt="Fashion Store">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Kontak Kami</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>Jl. Kenangan. 123, dihatimu</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@fashionstore.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Minggu: 08.00 - 21.00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fashion Store</h3>
+                    <p>Toko baju online terpercaya dengan kualitas premium dan harga terjangkau.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="#categories">Kategori</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Dapatkan update produk terbaru dan promo menarik</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email Anda">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fashion Store. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
